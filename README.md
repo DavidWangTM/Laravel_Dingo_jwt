@@ -1,20 +1,14 @@
-## vue-starter Backend API (Laravel-based)
-
-This application will serve as the companion app to another project called vue-starter. It is meant to be a small demo of a Laravel API, using Dingo and JWT for authentication.
-
-[vue-starter Frontend App](https://github.com/layer7be/vue-starter)
-
 ## Installation
 
 ### Step 1: Clone the repo
 ```
-git clone https://github.com/layer7be/vue-starter-laravel-api
+git clone https://github.com/DavidWangTM/Laravel_Dingo_jwt.git
 ```
 
 ### Step 2: Prerequisites
 ```
+cp .env.example .env
 composer install
-touch database/database.sqlite
 php artisan migrate
 php artisan db:seed
 php artisan key:generate
@@ -25,4 +19,9 @@ php artisan jwt:generate
 ### Step 3: Serve
 ```
 php artisan serve
+```
+
+### Setp 4:jwt-auth token
+```
+http://localhost:8000/api/dogs?token=(get_token)
 ```
